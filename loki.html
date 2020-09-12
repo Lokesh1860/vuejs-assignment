@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+<head>
+  <title>lowertoupper</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+</head>
+<body>
+  <div id="myapp">
+    <label>Enter String</label>
+   <input type="text" v-model="message" />
+   <p>string will convert automatically</p>
+   <h4>{{ message | uppercase }}</h4>
+
+</div>
+<script>
+  Vue.filter('uppercase', function (value) {
+   return value.toUpperCase()
+})
+
+new Vue({
+  el: '#myapp',
+  data: {
+    message: ' '
+   }
+})
+</script> 
+</body>
+</html>
